@@ -10,10 +10,10 @@ const uploadRoutes = require('./routes/uploadRoutes');
 const app = express();
 
 // Debug middleware to log all requests
-app.use((req, res, next) => {
-  console.log(`${req.method} ${req.url}`);
-  next();
-});
+// app.use((req, res, next) => {
+//   console.log(`${req.method} ${req.url}`);
+//   next();
+// });
 
 app.use(cors({
   origin: ["http://localhost:3000", "https://tomato-chat-client.vercel.app"],
@@ -35,9 +35,9 @@ app.use('/api', pushRoutes);
 app.use('/api/upload', uploadRoutes);
 
 // Catch-all route for unmatched API routes
-app.use('/api/*', (req, res) => {
-  console.log(`API route not found: ${req.method} ${req.url}`);
-  res.status(404).json({ message: 'API route not found' });
-});
+// app.use('/api/*', (req, res) => {
+//   console.log(`API route not found: ${req.method} ${req.url}`);
+//   res.status(404).json({ message: 'API route not found' });
+// });
 
 module.exports = app;
