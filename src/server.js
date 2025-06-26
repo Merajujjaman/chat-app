@@ -8,7 +8,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:3000", "https://tomato-chat-client.vercel.app"],
+    origin: ["http://localhost:3000", "https://tomaple-chat.vercel.app"],
     methods: ["GET", "POST"],
     credentials: true
   }

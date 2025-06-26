@@ -16,13 +16,13 @@ const app = express();
 // });
 
 app.use(cors({
-  origin: ["http://localhost:3000", "https://tomato-chat-client.vercel.app"],
+  origin: ["http://localhost:3000", "https://tomaple-chat.vercel.app"],
   credentials: true
 }));
 app.use(bodyParser.json());
 
 app.options('*', cors({
-  origin: ["http://localhost:3000", "https://tomato-chat-client.vercel.app"],
+  origin: ["http://localhost:3000", "https://tomaple-chat.vercel.app"],
   credentials: true
 }));
 
